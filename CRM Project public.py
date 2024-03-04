@@ -48,7 +48,7 @@ def df_data(api_data:pd.DataFrame):
         # Format the date and time as yyyy_mm_dd_hh_mm_ss
         formatted_datetime = current_datetime.strftime("%Y_%m_%d_%H_%M_%S")
         df.to_csv(f'FCA_Firm_Details {formatted_datetime}.csv', index=False)
-        
+        df.to_parquet(f'FCA_Firm_Details {formatted_datetime}.parquet', index=False)
     else:
         logging.warning("Empty DataFrame received. Skipping reshaping and CSV creation.")
 
