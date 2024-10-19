@@ -2,3 +2,7 @@ FCA_Firm_Details 2024_03_04_22_27_18.csv
 FCA_Firm_Details 2024_03_04_22_32_32.csv
 FCA_Firm_Details 2024_03_04_22_32_32.parquet
 secrets.txt
+dolphin-mistral code1 - trend trader.py
+dolphin-mistral code2 - trend trader.py
+scrap data.py
+simple ETL w SQL Alchemy.ipynb

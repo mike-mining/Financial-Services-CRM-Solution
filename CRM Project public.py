@@ -8,6 +8,7 @@ import logging
 
 firm_reference_number: list[str] = ['161227']
 
+# Call API and store data in DataFrame
 def api_call(frn:str) -> pd.DataFrame:
     email_address = 'YOUR_EMAIL_ADDRESS'
     api_key = 'YOUR_API_KEY'
@@ -38,7 +39,8 @@ def api_call(frn:str) -> pd.DataFrame:
     except requests.exceptions.RequestException as e:
         logging.error(f"Error making API call for FRN {frn}: {e}")
         return pd.DataFrame()
-    
+
+#     
 def df_data(api_data:pd.DataFrame):
     if not api_data.empty:
         #column_names: list[str] = ['Customer Engagement Method', 'Suspension / Restriction End Date', 'Suspension / Restriction Start Date', 'Restriction', 'Effective Date', 'Firm Name', 'Name', 'URL']
